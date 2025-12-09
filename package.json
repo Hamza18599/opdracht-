@@ -1,12 +1,16 @@
 {
   "name": "my-app",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"No tests yet\" && exit 0"
+    "start": "node src/app.js",
+    "test": "jest src"
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
   }
 }
