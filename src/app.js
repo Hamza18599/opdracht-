@@ -6,9 +6,9 @@ app.get('/', (req, res) => {
 });
 
 if (require.main === module) {
-  // Alleen luisteren als dit bestand direct wordt uitgevoerd
-  const PORT = 3001;
-  app.listen(PORT, () => {
+  // Luister op alle interfaces voor Docker
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
   });
 }
